@@ -18,6 +18,16 @@ def result(request):
     
     for j in range(7):
         number = random.randrange(1,46)
+        while number in random_list:
+            number = random.randrange(1,46)
         random_list.append(number)
 
-    return render(request, 'result.html', {'number_list':number_list, 'random_list':random_list})
+    # Number Matching
+    count = 0
+
+    for i in range(6):
+        for j in range(7):
+            if(number_list[i] == random_list[j]):
+                count = count + 1
+
+    return render(request, 'result.html', {'number_list':number_list, 'random_list':random_list, 'count':count})
