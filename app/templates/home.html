@@ -7,6 +7,17 @@
     <title>탕진잼 로또</title>
 </head>
 <body>
-    Lotto
+    <h1>Lotto</h1>
+
+    <form action="{% url 'result' %}">
+        <input type="number" name="number1">
+        <input type="number" name="number2">
+        <input type="number" name="number3">
+        <input type="number" name="number4">
+        <input type="number" name="number5">
+        <input type="number" name="number6">
+
+        <input type="submit" value="제출">
+    </form>
 </body>
 </html>

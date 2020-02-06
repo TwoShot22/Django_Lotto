@@ -7,6 +7,18 @@
     <title>결과 페이지</title>
 </head>
 <body>
-    Result
+    <h1>Result</h1>
+
+    <h3>입력한 수</h3>
+    
+    {% for number in number_list %}
+        {{number}}
+    {% endfor %}
+
+    <h3>추첨 번호</h3>
+
+    {% for random in random_list %}
+        {{random}}
+    {% endfor %}
 </body>
 </html>
